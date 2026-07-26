@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Sudoku Game</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <h1>Sudoku Game</h1>
+  <div class="setup">
+    <label for="player-name">Player name:</label>
+    <input id="player-name" type="text" maxlength="20" placeholder="Enter your name">
+    <label for="difficulty">Difficulty:</label>
+    <select id="difficulty">
+      <option value="Easy">Easy</option>
+      <option value="Medium">Medium</option>
+      <option value="Hard">Hard</option>
+    </select>
+    <button id="new-game">New Game</button>
+    <button id="check-solution">Check Solution</button>
+    <button id="hint-button">Use Hint</button>
+  </div>
+  <div id="timer" aria-live="polite">00:00</div>
+  <div id="sudoku-board"></div>
+  <div class="controls">
+    <span id="message"></span>
+  </div>
+  <div class="leaderboard">
+    <h2>Top 10 Leaderboard</h2>
+    <ol id="leaderboard-list"></ol>
+  </div>
+  <script src="{{ url_for('static', filename='main.js') }}"></script>
+</body>
+</html>

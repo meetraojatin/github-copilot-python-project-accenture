@@ -1,6 +1,30 @@
-# Ignore system files
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual Environment
+.venv/
+venv/
+env/
+
+# Pytest
+.pytest_cache/
+
+# VS Code
+.vscode/
+
+# OS files
 .DS_Store
 Thumbs.db
 
-# Ignore Python virtual environment
-.venv/
+# Environment variables
+.env
+
+# Coverage
+.coverage
+htmlcov/
+
+# Logs
+*.log
